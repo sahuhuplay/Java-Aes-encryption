@@ -18,11 +18,11 @@ Example (decrypt): java AESUtil -K "hexKey" -iv "hexIv" -d "ciphertext"
 #### 加密
 <div contenteditable="true">
 
-dalvikvm -cp aes.dex AESUtil -K <hex> -iv <hex> -e "data"
+dalvikvm -cp aes.dex AESUtil -K hexkey -iv hexvi -e "data"
 </div>
 
 #### 解密
 <div contenteditable="true">
 
-dalvikvm -cp aes.dex AESUtil -K <hex> -iv <hex> -d "base64data"
+dalvikvm -cp aes.dex AESUtil -K hexkey -iv hexvi -d "base64data"
 </div>
