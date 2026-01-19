@@ -5,7 +5,7 @@
 ### /帮助
 <div contenteditable="true">
 
-Usage: java AESUtil -K <hexKey> -iv <hexIv> <-e|-d> <data>
+> Usage: java AESUtil -K <hexKey> -iv <hexIv> <-e|-d> <data>
   -K <hexKey> AES key in hex format (required, 16/24/32 bytes)
   -iv <hexIv> Initialization vector in hex format (required, 16 bytes)
   -e: encrypt mode
@@ -18,11 +18,11 @@ Example (decrypt): java AESUtil -K "hexKey" -iv "hexIv" -d "ciphertext"
 #### 加密
 <div contenteditable="true">
 
-dalvikvm -cp aes.dex AESUtil -K hexkey -iv hexvi -e "data"
+> dalvikvm -cp aes.dex AESUtil -K hexkey -iv hexvi -e "data"
 </div>
 
 #### 解密
 <div contenteditable="true">
 
-dalvikvm -cp aes.dex AESUtil -K hexkey -iv hexvi -d "base64data"
+> dalvikvm -cp aes.dex AESUtil -K hexkey -iv hexvi -d "base64data"
 </div>
