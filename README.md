@@ -10,7 +10,7 @@
 Example (encrypt): java AESUtil -K "hexKey" -iv "hexIv" -e "plaintext"
 Example (decrypt): java AESUtil -K "hexKey" -iv "hexIv" -d "ciphertext"
 
-### 在android上使用
+### 在android终端上使用
 
 > cp aes.dex /data/data/xxx.xxx.xxx  
 > cd /data/data/xxx.xxx.xxx  
