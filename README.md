@@ -11,7 +11,13 @@ Example (encrypt): java AESUtil -K "hexKey" -iv "hexIv" -e "plaintext"
 Example (decrypt): java AESUtil -K "hexKey" -iv "hexIv" -d "ciphertext"
 
 ### 在android上使用
-#### 加密
+
+> cp aes.dex /data/data/xxx.xxx.xxx  
+> cd /data/data/xxx.xxx.xxx  
+> chmod 400 aes.dex
+
+加密
 > dalvikvm -cp aes.dex AESUtil -K hexkey -iv hexvi -e "data"
-#### 解密
+
+解密
 > dalvikvm -cp aes.dex AESUtil -K hexkey -iv hexvi -d "base64data"
