@@ -1,12 +1,14 @@
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+//import java.util.Base64;
 import android.util.Base64;
 
 public class AESUtil {
     public static void main(String[] args) {
         if (args.length < 4) {
-            System.out.println("用法: java AESUtil <encrypt|decrypt> <key> <iv> <data>");
+            //System.out.println("用法: java AESUtil <encrypt|decrypt> <key> <iv> <data>");
+            System.out.println("用法: dalvikvm -cp aes.dex AESUtil <encrypt|decrypt> <key> <iv> <data>");
             return;
         }
         
@@ -21,6 +23,7 @@ public class AESUtil {
             
             // 加密并输出结果
             byte[] encryptedBytes = cipher.doFinal(args[3].getBytes("UTF-8"));
+            //String  result = Base64.getEncoder().encodeToString(encryptedBytes);
             String  result = Base64.encodeToString(encryptedBytes, Base64.DEFAULT);
             System.out.print(result);
 
@@ -28,6 +31,7 @@ public class AESUtil {
             
             cipher.init(Cipher.DECRYPT_MODE, keySpec, ivSpec);
             // 解密并输出结果
+            //byte[] decryptedData = cipher.doFinal(Base64.getDecoder().decode(args[3]));
             byte[] decryptedData = cipher.doFinal(Base64.decode(args[3], Base64.DEFAULT));
             String result = new String(decryptedData, "UTF-8");
             System.out.print(result);
